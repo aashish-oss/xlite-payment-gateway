@@ -1,0 +1,81 @@
+═══════════════════════════════════════════════════════════════
+  GMAIL 535 ERROR FIX - STEP BY STEP
+═══════════════════════════════════════════════════════════════
+
+❌ Error: "535 Username and Password not accepted"
+✅ Solution: Gmail App Password use karo (normal password nahi)
+
+═══════════════════════════════════════════════════════════════
+STEP 1: Gmail App Password Generate Karo
+═══════════════════════════════════════════════════════════════
+
+1. Browser mein jao: https://myaccount.google.com/apppasswords
+
+2. Agar "App Passwords" option nahi dikh raha:
+   → Pehle Security → 2-Step Verification ON karo
+   → Phir wapas App Passwords par jao
+
+3. "Select app" → "Mail" choose karo
+
+4. "Select device" → "Other" → naam daalo: "Xlite Server"
+
+5. "Generate" button dabao
+
+6. 16-character password dikhega (jaise: abcd efgh ijkl mnop)
+   ⚠️ YEHI COPY KARO - yeh sirf ek baar dikhega!
+
+═══════════════════════════════════════════════════════════════
+STEP 2: Server .env File Update Karo
+═══════════════════════════════════════════════════════════════
+
+server\.env file kholo aur yeh update karo:
+
+CONTACT_EMAIL=xlitewalletindia@gmail.com
+SMTP_USER=xlitewalletindia@gmail.com
+SMTP_PASSWORD=abcdefghijklmnop
+
+⚠️ IMPORTANT:
+   - <16_char_app_password_bina_space> ki jagah ACTUAL password paste karo
+   - Spaces HATA DO (abcd efgh → abcdefgh)
+   - Normal Gmail password MAT use karo
+
+Example:
+SMTP_PASSWORD=abcd efgh ijkl mnop  ❌ (spaces ke saath)
+SMTP_PASSWORD=abcdefghijklmnop      ✅ (bina spaces)
+
+═══════════════════════════════════════════════════════════════
+STEP 3: Server Restart Karo
+═══════════════════════════════════════════════════════════════
+
+LOCAL SERVER:
+   Terminal mein Ctrl+C se server band karo
+   Phir: npm run server
+
+PRODUCTION (Railway/Render):
+   Dashboard mein "Redeploy" ya "Restart" button dabao
+
+═══════════════════════════════════════════════════════════════
+STEP 4: Test Karo
+═══════════════════════════════════════════════════════════════
+
+1. xlitepay.in → Contact form fill karo
+2. Submit karo
+3. Agar ab bhi 535 error aaye:
+   → Naya App Password generate karo
+   → .env file update karo
+   → Server restart karo
+
+═══════════════════════════════════════════════════════════════
+COMMON MISTAKES:
+═══════════════════════════════════════════════════════════════
+
+❌ Normal Gmail password use karna
+✅ Gmail App Password use karna (16 characters)
+
+❌ Password mein spaces rakhna
+✅ Spaces hata kar paste karna
+
+❌ .env file update ke baad server restart nahi karna
+✅ Server restart karna zaroori hai
+
+═══════════════════════════════════════════════════════════════

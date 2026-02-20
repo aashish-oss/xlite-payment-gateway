@@ -1,0 +1,107 @@
+═══════════════════════════════════════════════════════════════
+  XLITE PAYMENT GATEWAY - QUICK START GUIDE
+═══════════════════════════════════════════════════════════════
+
+❌ "Failed to fetch" Error Fix Karne Ke Liye:
+
+═══════════════════════════════════════════════════════════════
+STEP 1: Server Dependencies Install Karo
+═══════════════════════════════════════════════════════════════
+
+Terminal kholo aur yeh command run karo:
+
+    cd server
+    npm install
+    cd ..
+
+═══════════════════════════════════════════════════════════════
+STEP 2: Gmail App Password Setup (Important!)
+═══════════════════════════════════════════════════════════════
+
+1. Browser mein jao: https://myaccount.google.com/security
+2. "2-Step Verification" enable karo (agar nahi hai)
+3. "App Passwords" par click karo
+4. "Select app" → "Mail" choose karo
+5. "Select device" → "Other" → "Xlite Server" type karo
+6. "Generate" button dabao
+7. 16-character password copy karo (jaise: abcd efgh ijkl mnop)
+
+═══════════════════════════════════════════════════════════════
+STEP 3: .env File Update Karo
+═══════════════════════════════════════════════════════════════
+
+server\.env file kholo aur yeh update karo:
+
+    CONTACT_EMAIL=xlitewalletindia@gmail.com
+    SMTP_USER=xlitewalletindia@gmail.com
+    SMTP_PASSWORD=<YOUR_16_CHAR_APP_PASSWORD>
+    PORT=3001
+
+⚠️ IMPORTANT: <YOUR_16_CHAR_APP_PASSWORD> ki jagah apna actual password paste karo
+   (spaces hata kar, sirf 16 characters)
+
+═══════════════════════════════════════════════════════════════
+STEP 4: Server Start Karo
+═══════════════════════════════════════════════════════════════
+
+OPTION A - PowerShell Script (Easiest):
+    .\start-server.ps1
+
+OPTION B - npm Command:
+    npm run server
+
+OPTION C - Manual:
+    cd server
+    npm run dev
+
+✅ Server start hone par yeh dikhega:
+   "✅ Contact API running on http://localhost:3001"
+
+═══════════════════════════════════════════════════════════════
+STEP 5: Frontend Start Karo (Nayi Terminal)
+═══════════════════════════════════════════════════════════════
+
+Nayi terminal kholo aur yeh run karo:
+
+    npm run dev
+
+✅ Frontend start hone par yeh dikhega:
+   "Local: http://localhost:5173"
+
+═══════════════════════════════════════════════════════════════
+STEP 6: Test Karo
+═══════════════════════════════════════════════════════════════
+
+1. Browser mein http://localhost:5173 kholo
+2. Contact page par jao
+3. Contact form fill karo aur submit karo
+4. Agar server running hai to "Message sent!" dikhega
+5. xlitewalletindia@gmail.com inbox check karo
+
+═══════════════════════════════════════════════════════════════
+TROUBLESHOOTING
+═══════════════════════════════════════════════════════════════
+
+❌ "Failed to fetch" error:
+   → Server running nahi hai
+   → Solution: npm run server run karo
+
+❌ "Contact form is not configured":
+   → SMTP_PASSWORD .env file mein nahi hai
+   → Solution: Gmail App Password generate karo aur .env mein add karo
+
+❌ Email nahi ja rahi:
+   → Gmail App Password galat hai
+   → Solution: Naya App Password generate karo aur .env update karo
+
+═══════════════════════════════════════════════════════════════
+DONO EK SAATH START KARNE KE LIYE:
+═══════════════════════════════════════════════════════════════
+
+PowerShell mein:
+    .\start-all.ps1
+
+Ya npm se:
+    npm run dev:all
+
+═══════════════════════════════════════════════════════════════
