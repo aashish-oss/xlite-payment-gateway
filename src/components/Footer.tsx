@@ -64,6 +64,8 @@ const Footer = () => (
             <li><Link to="/about" className="hover:text-primary transition-colors">About Us</Link></li>
             <li><Link to="/security" className="hover:text-primary transition-colors">Security</Link></li>
             <li><Link to="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
+            <li><Link to="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
+            <li><Link to="/terms-and-conditions" className="hover:text-primary transition-colors">Terms and Conditions</Link></li>
           </ul>
         </div>
 
@@ -90,8 +92,10 @@ const Footer = () => (
       </div>
 
       <div className="mt-14 pt-8 border-t border-navy-foreground/15 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-navy-foreground/60">
-        <p>© 2025 Xlite Payments Pvt. Ltd. All rights reserved.</p>
-        <div className="flex gap-6">
+        <p>© 2025 Xlite Wallet India Pvt. Ltd. All rights reserved.</p>
+        <div className="flex flex-wrap justify-center gap-6">
+          <Link to="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link>
+          <Link to="/terms-and-conditions" className="hover:text-primary transition-colors">Terms and Conditions</Link>
           <Link to="/security" className="hover:text-primary transition-colors">Security</Link>
           <Link to="/contact" className="hover:text-primary transition-colors">Contact</Link>
         </div>

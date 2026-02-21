@@ -52,7 +52,7 @@ const Index = () => (
             India's Next-Gen Payment Gateway
           </span>
           <h1 className="font-display text-4xl font-bold leading-tight tracking-tight text-primary-foreground md:text-6xl">
-            Xlite – Smart & Secure Payment Solutions
+            Xlite – Smart & Secure Banking Payment Solutions
           </h1>
           <p className="mt-6 text-lg text-primary-foreground/80">
             Accept payments via UPI, cards, wallets, and net banking with our reliable, developer-friendly APIs. Built for scale, designed for India.
@@ -101,7 +101,7 @@ const Index = () => (
     {/* Features */}
     <section className="py-20">
       <div className="container">
-        <SectionHeading badge="Features" title="Everything You Need to Accept Payments" description="From real-time dashboards to fraud detection — Xlite gives you a complete payment infrastructure." />
+        <SectionHeading badge="Features" title="Everything You Need to Accept Payments" description="From real-time dashboards to fraud detection — Xlite gives you a complete Banking payment infrastructure." />
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {features.map((f, i) => (
             <motion.div key={f.title} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
@@ -112,6 +112,28 @@ const Index = () => (
               </div>
               <h3 className="font-display text-lg font-semibold">{f.title}</h3>
               <p className="mt-2 text-sm text-muted-foreground">{f.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* How it works */}
+    <section className="border-t bg-secondary/30 py-20">
+      <div className="container">
+        <SectionHeading badge="Simple Steps" title="How It Works" description="Get started with Xlite in three easy steps and start accepting payments in no time." />
+        <div className="grid gap-8 md:grid-cols-3">
+          {[
+            { step: "01", title: "Sign Up & Get Verified", desc: "Register with your business details and complete our quick KYC process. We support sole proprietors, LLPs, and companies." },
+            { step: "02", title: "Integrate Our APIs", desc: "Use our REST APIs or SDKs to integrate payments into your app or website. Detailed documentation and sandbox are available." },
+            { step: "03", title: "Go Live & Grow", desc: "Switch to live mode, start accepting real payments, and use the dashboard for analytics, settlements, and support." },
+          ].map((item, i) => (
+            <motion.div key={item.step} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}
+              className="relative rounded-xl border bg-card p-6"
+            >
+              <span className="font-display text-4xl font-bold text-primary/20">{item.step}</span>
+              <h3 className="mt-2 font-display text-lg font-semibold">{item.title}</h3>
+              <p className="mt-2 text-sm text-muted-foreground">{item.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -133,15 +155,12 @@ const Index = () => (
               <Link to="/developers">Explore APIs</Link>
             </Button>
             <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary hover:bg-primary-foreground/10" asChild>
-        
+              <Link to="/contact">Contact Us</Link>
             </Button>
           </div>
         </motion.div>
       </div>
     </section>
-
-    {/* Trust */}
-
   </>
 );
 
