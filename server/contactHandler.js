@@ -10,7 +10,8 @@ const CONTACT_EMAIL = process.env.CONTACT_EMAIL || "xlitewalletindia@gmail.com";
 
 function getTransporter() {
   return nodemailer.createTransport({
-    service:"gmail",
+    host:"smtp.resend.com",
+    port:587,
     auth: {
       user: process.env.SMTP_USER || CONTACT_EMAIL,
       pass: process.env.SMTP_PASSWORD,
