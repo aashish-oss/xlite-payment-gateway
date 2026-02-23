@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
-import { Menu, X, Zap } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
@@ -20,9 +20,12 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 border-b bg-card/80 backdrop-blur-lg">
       <div className="container flex h-16 items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 font-display text-xl font-bold text-primary">
-          <Zap className="h-6 w-6" />
-          Xlite
+        <Link to="/" className="flex items-center shrink-0">
+          <img 
+  src="./src/assets/xlitelogo.png"
+  alt="Xlite Wallet India"
+  className="h-auto w-40 object-contain"
+/>
         </Link>
 
         {/* Desktop */}

@@ -8,7 +8,7 @@ import { Mail, Phone, MapPin, Send, AlertCircle, AlertTriangle } from "lucide-re
 import { useToast } from "@/hooks/use-toast";
 
 const CONTACT_EMAIL = "xlitewalletindia@gmail.com";
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3001";
+const API_URL = import.meta.env.VITE_API_URL;
 
 const Contact = () => {
   const { toast } = useToast();
@@ -63,6 +63,8 @@ const Contact = () => {
     };
 
     try {
+      
+      console.log("api url",API_URL)
       const res = await fetch(`${API_URL}/api/contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -88,7 +90,7 @@ const Contact = () => {
         errorTitle = "❌ Server Not Running";
         errorMessage = `Server is not running on ${API_URL}. Please start it:\n\n1. Open terminal\n2. Run: npm run server\n\nOr use PowerShell: .\\start-server.ps1`;
       } else if (err instanceof Error) {
-        errorMessage = err.message;
+        errorMessage = err.message; 
       } else {
         errorMessage = "Please try again or email " + CONTACT_EMAIL + " directly.";
       }
@@ -198,7 +200,7 @@ const Contact = () => {
                   <a href="tel:+918077113239" className="text-sm font-medium text-primary hover:underline focus:outline-none focus:ring-2 focus:ring-primary/50 rounded">
                     +91 8077113239
                   </a>
-                  <p className="text-sm text-muted-foreground">Mon–Sat, 9 AM – 7 PM IST</p>
+                  <p className="text-sm text-muted-foreground">Mon–Sat, 10 AM – 6 PM IST</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">

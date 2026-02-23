@@ -15,17 +15,17 @@ const toSlug = (title: string) =>
     .replace(/^-|-$/g, "");
 
 const services = [
-  { icon: Smartphone, title: "UPI Payment API", desc: "Accept payments via all UPI apps — Google Pay, PhonePe, Paytm, and more. Instant settlement with real-time notifications.", color: "text-primary" },
+  { icon: Smartphone, title: "UPI Payment ", desc: "Accept payments via all UPI apps — Google Pay, PhonePe, Paytm, and more. Instant settlement with real-time notifications.", color: "text-primary" },
   { icon: CreditCard, title: "Credit & Debit Cards", desc: "Accept Visa, Mastercard, RuPay, and Amex with tokenized card storage and 3D Secure authentication.", color: "text-accent" },
-  { icon: ShoppingCart, title: "Collections API", desc: "Unified API for accepting payments via UPI, cards, wallets, and netbanking with instant settlement.", color: "text-primary" },
-  { icon: Plane, title: "Verification API", desc: "Instant mobile number and email verification with OTP, ensuring secure transactions and user authentication.", color: "text-accent" },
-  { icon : Bus, title: "Travel API", desc: "Book flights, trains, and buses with real-time availability, pricing, and secure payment processing.", color: "text-primary" },
-  { icon: ArrowRight, title: "Payout API", desc: "Send payouts to bank accounts, UPI IDs, or wallets instantly. Automate vendor payments and refunds.", color: "text-primary" },
-  { icon: Zap, title: "Recharge & Bill Payment API", desc: "Mobile recharge, DTH, electricity, gas, water, and broadband bill payments via a single API integration.", color: "text-primary" },
-  { icon: Send, title: "DMT API", desc: "Domestic Money Transfer API enabling instant fund transfers to any bank account across India via IMPS/NEFT.", color: "text-accent" },
-  { icon: Globe, title: "AEPS API", desc: "Aadhaar Enabled Payment System API for cash withdrawal, balance enquiry, and mini statement using biometrics.", color: "text-primary" },
-  { icon: IdCard, title: "PAN Card API", desc: "Instant PAN card verification, UTI/NSDL PAN application, and correction services through a simple API.", color: "text-accent" },
-  { icon: Building2, title: "Account Opening API", desc: "Instant bank account opening with KYC verification, e-signature, and seamless integration for your customers.", color: "text-primary" },
+  { icon: ShoppingCart, title: "Collections ", desc: "Unified API for accepting payments via UPI, cards, wallets, and netbanking with instant settlement.", color: "text-primary" },
+  { icon: Plane, title: "Verification ", desc: "Instant mobile number and email verification with OTP, ensuring secure transactions and user authentication.", color: "text-accent" },
+  { icon : Bus, title: "Travel ", desc: "Book flights, trains, and buses with real-time availability, pricing, and secure payment processing.", color: "text-primary" },
+  { icon: ArrowRight, title: "Payout ", desc: "Send payouts to bank accounts, UPI IDs, or wallets instantly. Automate vendor payments and refunds.", color: "text-primary" },
+  { icon: Zap, title: "Recharge & Bill Payment ", desc: "Mobile recharge, DTH, electricity, gas, water, and broadband bill payments via a single API integration.", color: "text-primary" },
+  { icon: Send, title: "DMT ", desc: "Domestic Money Transfer API enabling instant fund transfers to any bank account across India via IMPS/NEFT.", color: "text-accent" },
+  { icon: Globe, title: "AEPS ", desc: "Aadhaar Enabled Payment System API for cash withdrawal, balance enquiry, and mini statement using biometrics.", color: "text-primary" },
+  { icon: IdCard, title: "PAN Card ", desc: "Instant PAN card verification, UTI/NSDL PAN application, and correction services through a simple API.", color: "text-accent" },
+  { icon: Building2, title: "Account Opening ", desc: "Instant bank account opening with KYC verification, e-signature, and seamless integration for your customers.", color: "text-primary" },
   { icon: Package, title: "CMS & Dashboard", desc: "Comprehensive dashboard for transaction monitoring, settlement tracking, and detailed analytics with exportable reports.", color: "text-accent" },
 ];
 

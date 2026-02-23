@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Zap, Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 const CONTACT_EMAIL = "xlitewalletindia@gmail.com";
 const GMAIL_COMPOSE_URL = `https://mail.google.com/mail/?view=cm&to=${CONTACT_EMAIL}`;
@@ -11,12 +11,11 @@ const Footer = () => (
       <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-5">
         {/* Brand + Contact & Address */}
         <div className="lg:col-span-2">
-          <Link to="/" className="inline-flex items-center gap-2 font-display text-2xl font-bold text-primary">
-            <Zap className="h-6 w-6" />
-            Xlite
+          <Link to="/" className="inline-flex items-center shrink-0">
+            <img src="./src/assets/xlitelogo.png" alt="Xlite Wallet India" className="h-auto w-40 object-contain"/>
           </Link>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-navy-foreground/80">
-            Smart & Secure Payment Solutions for modern businesses across India.
+            Smart & Secure Banking & Payment Solutions for modern businesses across India.
           </p>
           <div className="mt-6 space-y-3">
             <a href={GMAIL_COMPOSE_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-navy-foreground/80 hover:text-primary transition-colors">
@@ -31,7 +30,7 @@ const Footer = () => (
               <MapPin className="h-4 w-4 shrink-0 mt-0.5" />
               Xlite Payments Pvt. Ltd., T3 A-611, 6th floor NX-one, Greater Noida, Noida, Uttar Pradesh 201306, India
             </p>
-            <p className="text-xs text-navy-foreground/60">Mon–Sat, 9 AM – 7 PM IST</p>
+            <p className="text-xs text-navy-foreground/60">Mon–Sat, 10 AM – 6 PM IST</p>
           </div>
         </div>
 
@@ -41,17 +40,17 @@ const Footer = () => (
             Payment APIs
           </h4>
           <ul className="space-y-2.5 text-sm text-navy-foreground/80">
-            <li><Link to="/services#upi-payment-api" className="hover:text-primary transition-colors">UPI Payment API</Link></li>
+            <li><Link to="/services#upi-payment-api" className="hover:text-primary transition-colors">UPI Payment </Link></li>
             <li><Link to="/services#credit-debit-cards" className="hover:text-primary transition-colors">Credit & Debit Cards</Link></li>
-            <li><Link to="/services#collections-api" className="hover:text-primary transition-colors">Collection API</Link></li>
-            <li><Link to="/services#verification-api" className="hover:text-primary transition-colors">Verification API</Link></li>
-            <li><Link to="/services#travel-api" className="hover:text-primary transition-colors">Travel API</Link></li>
-            <li><Link to="/services#payout-api" className="hover:text-primary transition-colors">Payout API</Link></li>
-            <li><Link to="/services#recharge-bill-payment-api" className="hover:text-primary transition-colors">Recharge & Bill Payment API</Link></li>
-            <li><Link to="/services#dmt-api" className="hover:text-primary transition-colors">DMT API</Link></li>
-            <li><Link to="/services#account-opening-api" className="hover:text-primary transition-colors">Account Opening API</Link></li>
-            <li><Link to="/services#aeps-api" className="hover:text-primary transition-colors">AEPS API</Link></li>
-            <li><Link to="/services#pan-card-api" className="hover:text-primary transition-colors">PAN Card API</Link></li>
+            <li><Link to="/services#collections-api" className="hover:text-primary transition-colors">Collection </Link></li>
+            <li><Link to="/services#verification-api" className="hover:text-primary transition-colors">Verification </Link></li>
+            <li><Link to="/services#travel-api" className="hover:text-primary transition-colors">Travel </Link></li>
+            <li><Link to="/services#payout-api" className="hover:text-primary transition-colors">Payout </Link></li>
+            <li><Link to="/services#recharge-bill-payment-api" className="hover:text-primary transition-colors">Recharge & Bill Payment </Link></li>
+            <li><Link to="/services#dmt-api" className="hover:text-primary transition-colors">DMT </Link></li>
+            <li><Link to="/services#account-opening-api" className="hover:text-primary transition-colors">Account Opening </Link></li>
+            <li><Link to="/services#aeps-api" className="hover:text-primary transition-colors">AEPS </Link></li>
+            <li><Link to="/services#pan-card-api" className="hover:text-primary transition-colors">PAN Card </Link></li>
           </ul>
         </div>
 
