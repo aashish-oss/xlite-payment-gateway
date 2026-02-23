@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin } from "lucide-react";
+import logo from "../assets/xlitelogo.png";
 
 const CONTACT_EMAIL = "xlitewalletindia@gmail.com";
 const GMAIL_COMPOSE_URL = `https://mail.google.com/mail/?view=cm&to=${CONTACT_EMAIL}`;
@@ -12,7 +13,7 @@ const Footer = () => (
         {/* Brand + Contact & Address */}
         <div className="lg:col-span-2">
           <Link to="/" className="inline-flex items-center shrink-0">
-            <img src="./src/assets/xlitelogo.png" alt="Xlite Wallet India" className="h-auto w-40 object-contain"/>
+            <img src={logo} alt="Xlite Wallet India" className="h-auto w-40 object-contain"/>
           </Link>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-navy-foreground/80">
             Smart & Secure Banking & Payment Solutions for modern businesses across India.

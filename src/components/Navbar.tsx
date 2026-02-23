@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "../assets/xlitelogo.png";
 
 const navLinks = [
   { to: "/", label: "Home" },
@@ -22,7 +23,7 @@ const Navbar = () => {
       <div className="container flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center shrink-0">
           <img 
-  src="./src/assets/xlitelogo.png"
+  src={logo}
   alt="Xlite Wallet India"
   className="h-auto w-40 object-contain"
 />
