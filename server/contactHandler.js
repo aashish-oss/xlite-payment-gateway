@@ -10,9 +10,7 @@ const CONTACT_EMAIL = process.env.CONTACT_EMAIL || "xlitewalletindia@gmail.com";
 
 function getTransporter() {
   return nodemailer.createTransport({
-    host: process.env.SMTP_HOST || "smtp.gmail.com",
-    port: Number(process.env.SMTP_PORT) || 587,
-    secure: process.env.SMTP_SECURE === "true",
+    service:"gamil",
     auth: {
       user: process.env.SMTP_USER || CONTACT_EMAIL,
       pass: process.env.SMTP_PASSWORD,
@@ -30,6 +28,9 @@ export async function sendContactEmail(body) {
   }
 
   const transporter = getTransporter();
+   await transporter.verify();
+  console.log("smtp server ready");
+  
   const mailOptions = {
     from: process.env.SMTP_FROM || `"Xlite Contact" <${process.env.SMTP_USER || CONTACT_EMAIL}>`,
     to: CONTACT_EMAIL,
@@ -53,6 +54,8 @@ export async function sendContactEmail(body) {
       "<p>" + (message || "-").replace(/\n/g, "<br>") + "</p>",
     ].join(""),
   };
+
+ 
 
   try {
     await transporter.sendMail(mailOptions);
